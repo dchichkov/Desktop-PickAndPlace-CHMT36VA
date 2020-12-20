@@ -776,30 +776,30 @@ void loadBoardInformation() {
         //searching for the 4 most extreem fiducials on top and bottom
         if(pnpFeeder[pnpCount] == FEEDER_FIDUCIAL){
           if(pnpPos[pnpCount]) {
-            if(pnpX[pnpCount]+pnpY[pnpCount]>pnpX[usedFiducial[0]]+pnpY[usedFiducial[0]]){
+            if(!usedFiducial[0] || pnpX[pnpCount]>pnpX[usedFiducial[0]]){
               usedFiducial[0]=pnpCount;
             }
-            if(pnpX[pnpCount]-pnpY[pnpCount]>pnpX[usedFiducial[1]]-pnpY[usedFiducial[1]]){
+            if(!usedFiducial[1] || pnpY[pnpCount]>pnpY[usedFiducial[1]]){
               usedFiducial[1]=pnpCount;
             }
-            if(pnpX[pnpCount]-pnpY[pnpCount]<pnpX[usedFiducial[2]]-pnpY[usedFiducial[2]]){
+            if(!usedFiducial[2] || pnpX[pnpCount]<pnpX[usedFiducial[2]]){
               usedFiducial[2]=pnpCount;
             }
-            if(pnpX[pnpCount]+pnpY[pnpCount]<pnpX[usedFiducial[3]]+pnpY[usedFiducial[3]]){
+            if(!usedFiducial[3] || pnpY[pnpCount]<pnpY[usedFiducial[3]]){
               usedFiducial[3]=pnpCount;
             }
           }
           else {
-            if(pnpX[pnpCount]+pnpY[pnpCount]>pnpX[usedFiducial[4]]+pnpY[usedFiducial[4]]){
+            if(!usedFiducial[4] || pnpX[pnpCount]>pnpX[usedFiducial[4]]){
               usedFiducial[4]=pnpCount;
             }
-            if(pnpX[pnpCount]-pnpY[pnpCount]>pnpX[usedFiducial[5]]-pnpY[usedFiducial[5]]){
+            if(!usedFiducial[5] || pnpY[pnpCount]>pnpY[usedFiducial[5]]){
               usedFiducial[5]=pnpCount;
             }
-            if(pnpX[pnpCount]-pnpY[pnpCount]<pnpX[usedFiducial[6]]-pnpY[usedFiducial[6]]){
+            if(!usedFiducial[6] || pnpX[pnpCount]<pnpX[usedFiducial[6]]){
               usedFiducial[6]=pnpCount;
             }
-            if(pnpX[pnpCount]+pnpY[pnpCount]<pnpX[usedFiducial[7]]+pnpY[usedFiducial[7]]){
+            if(!usedFiducial[7] || pnpY[pnpCount]<pnpX[usedFiducial[7]]){
               usedFiducial[7]=pnpCount;
             }
           }
